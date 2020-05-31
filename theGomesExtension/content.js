@@ -15,7 +15,7 @@ let filenames = [
 let imgs = document.getElementsByTagName('img');
 
 for(imgElement of imgs){
-    let r = Math.floor( Math.random()*filenames.length);
+    let r = Math.floor(Math.random() * filenames.length);
     let file = 'Gomeses/'+filenames[r];
     let url = chrome.extension.getURL(file);
     imgElement.src = url;

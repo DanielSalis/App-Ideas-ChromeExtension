@@ -1,13 +1,14 @@
 {
     "manifest_version":2,
     "name":"GominhoGenerator",
+    "description":"Replace all images on the screen to a random Gomes photo.",
     "version":"0.1",
     "web_accessible_resources":[
         "Gomeses/*.png"
     ],
     "content_scripts":[
         {
-            "matches":["<all_urls>"],
+            "matches":["https://www.google.com/*"],
             "js":["content.js"]
         }
     ],
