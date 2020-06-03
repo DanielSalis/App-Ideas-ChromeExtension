@@ -3,8 +3,18 @@
     "name":"MyColorTab",
     "description":"Select your favorite color and set it to your chrome tabs",
     "version":"1.0",
-    "browser_action":{
-        "default_popup":"popup.html"
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+    "permissions":["tabs"],
+    "background":{
+        "scripts":["background.js"]
     },
-    "permissions":["activeTab"]
+    "browser_action":{
+        "default_popup":"popup/popup.html",
+        "default_title":"Select a color!"
+    }
 }
